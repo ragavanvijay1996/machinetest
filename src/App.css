@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+
+
+.login{
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-left {
+  max-width: 500px;
+    width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.country {
+  width: 100%;
+  border: 1px solid black;
+}
+.country img {
+  max-width: 80px;
+  width: 100%;
+}
+.header ul li a.active {
+  border-bottom: 2px solid black;
+  padding-bottom: 3px;
+}
+.footer {
+  position: sticky;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 50px;
+}
+.social-icons a {
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+.social-icons a i {
+  color: black;
+}
+.menu-list {
+  display: flex;
+  gap: 20px;
+}
+.menu-btn {
+  display: none;
+}
+.lines {
+  position: relative;
+  width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.lines span {
+  background-color: white;
+  z-index: 99;
+}
+.lines:before {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: rgb(176, 176, 176);
+  z-index: -1;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 650px) {
+  .login-right {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .login-left {
+    text-align: center;
+  }
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .menu-list {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+    font-size: 25px;
+    padding: 0;
   }
 }
